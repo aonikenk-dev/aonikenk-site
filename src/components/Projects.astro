@@ -1,0 +1,60 @@
+---
+import data from '../data/site.json';
+const { projects } = data;
+---
+
+<section class="content" id="projects" style="background:var(--carbon);border-top:1px solid var(--border)">
+  <div class="s-inner">
+    <div class="s-head reveal">
+      <div class="eyebrow">
+        <span data-es>Proyectos</span><span data-en>Projects</span>
+      </div>
+      <h2 class="s-title">
+        <span data-es>Trabajo <span class="dim">reciente</span></span>
+        <span data-en>Recent <span class="dim">work</span></span>
+      </h2>
+    </div>
+
+    <div class="prj-grid">
+      {projects.map((p, i) => (
+        <div class={`prj-card${p.featured ? ' prj-featured' : ''} reveal${i > 0 ? ` d${i}` : ''}`}>
+          <div class={`prj-img ${p.featured ? 'tall' : 'normal'} ${p.color}`}>
+            {p.img
+              ? <img src={p.img} alt={p.en.name} loading="lazy" />
+              : (
+                <div class="prj-ph">
+                  <svg width={p.featured ? 40 : 32} height={p.featured ? 40 : 32} viewBox="0 0 100 100" fill="none">
+                    <polygon points="50,15 80,68 20,68" fill="none" stroke="#C0623A" stroke-width="2.5" stroke-linejoin="round"/>
+                    <line x1="33" y1="49" x2="67" y2="49" stroke="#C0623A" stroke-width="2.5"/>
+                    <circle cx="50" cy="78" r="4" fill="#7BAFC4"/>
+                  </svg>
+                  <span data-es>[ Reemplazar con captura del proyecto ]</span>
+                  <span data-en>[ Replace with project screenshot ]</span>
+                </div>
+              )
+            }
+            <div class="prj-overlay">
+              <div class="prj-view" data-es>Ver proyecto →</div>
+              <div class="prj-view" data-en>View project →</div>
+            </div>
+          </div>
+
+          <div class="prj-info">
+            <div>
+              <div class="prj-type" data-es>{p.es.type}</div>
+              <div class="prj-type" data-en>{p.en.type}</div>
+              <div class="prj-name" data-es>{p.es.name}</div>
+              <div class="prj-name" data-en>{p.en.name}</div>
+              <div class="prj-desc" data-es>{p.es.desc}</div>
+              <div class="prj-desc" data-en>{p.en.desc}</div>
+            <div class="srv-tags">
+              {p.tags.map(tag => <span class="stag">{tag}</span>)}
+            </div>
+            </div>
+            <a href={p.url} class="prj-arrow">↗</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+---
+import Isotipo from './Isotipo.astro';
+import LangSwitch from './LangSwitch.astro';
+import data from '../data/site.json';
+const { nav } = data;
+---
+
+<nav id="nav">
+  <a href="#splash" class="nav-left">
+    <Isotipo size={26} />
+    <div class="nav-wm">aonikenk<span class="dot">.dev</span></div>
+  </a>
+
+  <ul class="nav-links">
+    <li>
+      <a href="#services" data-es>{nav.es.services}</a>
+      <a href="#services" data-en>{nav.en.services}</a>
+    </li>
+    <li>
+      <a href="#projects" data-es>{nav.es.projects}</a>
+      <a href="#projects" data-en>{nav.en.projects}</a>
+    </li>
+    <li>
+      <a href="#contact" data-es>{nav.es.contact}</a>
+      <a href="#contact" data-en>{nav.en.contact}</a>
+    </li>
+  </ul>
+
+  <div class="nav-right">
+    <LangSwitch />
+    <a href="#contact" class="nav-cta" data-es>{nav.es.cta}</a>
+    <a href="#contact" class="nav-cta" data-en>{nav.en.cta}</a>
+  </div>
+</nav>
+
+<style lang="scss">
+  @use '../styles/tokens' as *;
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 48px;
+    transition: background .4s, padding .4s, border-bottom .4s;
+    pointer-events: none; opacity: 0;
+    &.visible  { pointer-events: all; opacity: 1; transition: background .4s, padding .4s, opacity .4s; }
+    &.scrolled { background: rgba(13,15,18,.92); backdrop-filter: blur(12px); padding: 16px 48px; border-bottom: 1px solid var(--border); }
+  }
+  .nav-left {
+    display: flex; align-items: center; gap: 10px; text-decoration: none;
+  }
+  .nav-wm {
+    font-family: $font-display; font-weight: 800; font-size: 18px;
+    color: var(--white); letter-spacing: -0.04em; display: flex; align-items: baseline;
+    .dot { color: var(--sienna); font-family: $font-mono; font-weight: 400; }
+  }
+  .nav-links {
+    display: flex; gap: 36px; list-style: none;
+    a {
+      font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color .2s; position: relative;
+      &::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--sienna); transition: width .3s; }
+      &:hover { color: var(--white); }
+      &:hover::after { width: 100%; }
+    }
+  }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .nav-cta {
+    font-family: $font-mono; font-size: 11px; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--sienna); text-decoration: none; border: 1px solid var(--sienna);
+    padding: 8px 18px; transition: background .2s, color .2s;
+    &:hover { background: var(--sienna); color: var(--white); }
+  }
+
+  @media(max-width: $bp-mobile) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 12px 24px; }
+    .nav-links { display: none; }
+  }
+</style>

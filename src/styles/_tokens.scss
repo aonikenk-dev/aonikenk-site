@@ -1,0 +1,40 @@
+// ── Brand tokens ─────────────────────────────────────────────
+$obsidian : #0D0F12;
+$carbon   : #161A20;
+$slate    : #1E242D;
+$border   : #2A3140;
+$muted    : #4A5568;
+$subtle   : #8896A8;
+$body     : #C8D4E0;
+$white    : #EEF3F8;
+$sienna   : #C0623A;
+$ember    : #E07A52;
+$moss     : #3D6B4F;
+$ice      : #7BAFC4;
+
+// ── CSS custom properties (used in JS too) ────────────────────
+:root {
+  --obsidian : #{$obsidian};
+  --carbon   : #{$carbon};
+  --slate    : #{$slate};
+  --border   : #{$border};
+  --muted    : #{$muted};
+  --subtle   : #{$subtle};
+  --body     : #{$body};
+  --white    : #{$white};
+  --sienna   : #{$sienna};
+  --ember    : #{$ember};
+  --moss     : #{$moss};
+  --ice      : #{$ice};
+}
+
+// ── Typography ────────────────────────────────────────────────
+$font-display : 'Syne', sans-serif;
+$font-mono    : 'DM Mono', monospace;
+
+// ── Breakpoints ───────────────────────────────────────────────
+$bp-mobile : 900px;
+
+// ── Spacing ───────────────────────────────────────────────────
+$section-pad   : 120px 48px;
+$section-pad-m : 80px 24px;

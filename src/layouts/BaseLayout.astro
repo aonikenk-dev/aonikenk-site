@@ -1,0 +1,75 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import data from '../data/site.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+}
+
+const {
+  title = `${data.site.name}${data.site.tld} — ${data.site.tagline}`,
+  description = 'Full Stack Developer & Designer from Patagonia. Custom software, branding and web design.',
+  lang = 'es',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+
+  <!-- Favicon -->
+  <link rel="icon"             href="/favicon.ico" sizes="48x48" />
+  <link rel="icon"             href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Global styles -->
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+  </style>
+</head>
+<body data-lang={lang}>
+
+  <!-- Custom cursor -->
+  <div id="cur"></div>
+  <div id="ring"></div>
+
+  <!-- Shared nav -->
+  <Nav />
+
+  <!-- Page content -->
+  <slot />
+
+  <!-- Shared footer -->
+  <Footer />
+
+  <!-- Boot all JS modules -->
+  <script>
+    import { initCursor } from '../scripts/cursor.js';
+    import { initLang   } from '../scripts/i18n.js';
+    import { initSplash } from '../scripts/splash.js';
+    import { initReveal } from '../scripts/reveal.js';
+
+    initCursor();
+    initLang();
+    initSplash();
+    initReveal();
+  </script>
+
+</body>
+</html>
+
+<style lang="scss" is:global>
+  @use '../styles/main.scss';
+</style>

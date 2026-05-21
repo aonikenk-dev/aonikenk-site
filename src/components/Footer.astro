@@ -1,0 +1,75 @@
+---
+import Isotipo from './Isotipo.astro';
+import data from '../data/site.json';
+const { footer, site } = data;
+---
+
+<footer>
+  <div class="ft-lockup">
+    <div class="ft-imagotipo">
+      <Isotipo size={22} />
+      <div class="ft-logo">{site.name}<span class="dot">{site.tld}</span></div>
+    </div>
+    <div class="ft-slogan">{site.slogan}.</div>
+  </div>
+
+  <div class="ft-copy">
+    © <span id="current-year"></span> · {site.location}
+  </div>
+
+  <ul class="ft-links">
+    <li>
+      <a href="#services" data-es>{footer.es.services}</a>
+      <a href="#services" data-en>{footer.en.services}</a>
+    </li>
+    <li>
+      <a href="#projects" data-es>{footer.es.projects}</a>
+      <a href="#projects" data-en>{footer.en.projects}</a>
+    </li>
+    <li>
+      <a href="#contact" data-es>{footer.es.contact}</a>
+      <a href="#contact" data-en>{footer.en.contact}</a>
+    </li>
+  </ul>
+</footer>
+
+<script>
+  const el = document.getElementById('current-year');
+  if (el) el.textContent = String(new Date().getFullYear());
+</script>
+
+<style lang="scss">
+  @use '../styles/tokens' as *;
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .ft-imagotipo { display:flex; align-items:center; gap:8px; }
+  .ft-lockup { display:flex; flex-direction:column; gap:0px; }
+  .ft-logo {
+    font-family: $font-display; font-weight: 800; font-size: 14px;
+    color: var(--white); letter-spacing: -0.04em;
+    display: flex; align-items: baseline;
+    .dot { color: var(--sienna); font-family: $font-mono; font-weight: 400; }    
+  }
+  .ft-slogan { 
+    font-family:'DM Mono',monospace; 
+    font-size:8px; 
+    font-style:italic; 
+    letter-spacing:.08em; 
+    color:var(--subtle); 
+    padding-left:27px; 
+  }
+  .ft-copy  { font-size: 10px; letter-spacing: .1em; color: var(--muted); }
+  .ft-links {
+    display: flex; gap: 24px; list-style: none;
+    a { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; &:hover { color: var(--sienna); } }
+  }
+
+  @media(max-width: $bp-mobile) {
+    footer { flex-direction: column; gap: 16px; text-align: center; }
+    .ft-links { display: none; }
+  }
+</style>

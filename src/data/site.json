@@ -1,0 +1,175 @@
+{
+  "site": {
+    "name": "aonikenk",
+    "tld": ".dev",
+    "tagline": "Software · Branding · Solutions",
+    "cover_slogan": "Crafted at the edge · 🗻 · ",
+    "slogan": "Crafted at the edge",
+    "email": "hello@aonikenk.dev",
+    "location": "Patagonia, Argentina",
+    "socials": {
+      "linkedin": "https://linkedin.com/in/[your-username]",
+      "github": "https://github.com/aonikenk-dev"
+    }
+  },
+
+  "hero": {
+    "es": {
+      "title": ["Experiencias digitales", "que", "transforman."],
+      "sub": "Digital development studio.",
+      "body": "Estudio de desarrollo de software y soluciones de TI especializado en sistemas de software modernos, interfaces minimalistas y una sólida identidad visual. Creamos con personalidad y diseñamos experiencias digitales que transforman.",
+      "cta_primary": "Ver proyectos",
+      "cta_secondary": "Hablemos →"
+    },
+    "en": {
+      "title": ["Digital experiences", "that", "transform."],
+      "sub": "Digital development studio.",
+      "body": "Software development and IT solutions studio focused on modern software systems, minimal interfaces and strong visual identity. We craft with character and design digital experiences that transform.",
+      "cta_primary": "View projects",
+      "cta_secondary": "Let's talk →"
+    }
+  },
+
+  "services": [
+    {
+      "id": "software",
+      "num": "01",
+      "icon": "terminal",
+      "es": {
+        "name": "Desarrollo de Software y Diseño Web a medida",
+        "desc": "Desarrollo de plataformas web y herramientas internas diseñadas para tus procesos de negocio, APIs y sistemas a medida. Diseño UI/UX, desarrollo responsive y optimización SEO. Desde MVPs hasta plataformas complejas, con foco en rendimiento y escalabilidad."
+      },
+      "en": {
+        "name": "Software Development & Web Design",
+        "desc": "Web platforms and in-house tools designed for your business processes, APIs and tailored systems. UI/UX design, responsive development and SEO optimization. From MVPs to complex platforms, focused on performance and scalability."
+      },
+      "servicesItems": ["Websites", "Dashboards", "CRMs", "ERPs", "Databases and reports"]
+    },
+    {
+      "id": "branding",
+      "num": "02",
+      "icon": "triangle",
+      "es": {
+        "name": "Branding & Identidad",
+        "desc": "Diseño de marca desde cero: logo, paleta, tipografía y manual de identidad, creados para definir tu voz y asegurar una imagen coherente en cada punto de contacto. Construimos marcas con personalidad, claridad visual e impacto memorable para que destaquen, conecten con la audiencia y perduren."
+      },
+      "en": {
+        "name": "Branding & Identity",
+        "desc": "Brand design from scratch: logo, palette, typography and brand guidelines, crafted to define your voice and ensure a consistent look and feel across every touchpoint. We build brands with personality, visual clarity and memorable impact so they stand out, connect with audiences and endure."
+      },
+      "servicesItems": ["Logo Design", "Brand strategy", "Visual identity", "Digital Marketing", "Social Media"]
+    },
+    {
+      "id": "ai",
+      "num": "03",
+      "icon": "monitor",
+      "es": {
+        "name": "IA y Automatización",
+        "desc": "Soluciones de IA y automatización diseñadas para simplificar flujos de trabajo complejos, aumentar la eficiencia y generar resultados tangibles. Con información basada en datos, automatización inteligente de procesos y tecnología avanzada, ayudamos a las organizaciones a tomar mejores decisiones y reducir retrasos."
+      },
+      "en": {
+        "name": "AI & Automation",
+        "desc": "AI and Automation solutions designed to simplify complex workflows, boost efficiency, and drive tangible outcomes. Using data-driven insights, smart process automation, and advanced technology, we help organizations make better decisions and cut down on delays."
+      },
+      "servicesItems": ["AI Assistants", "Chatbots", "Process automation", "Data analysis", "Custom AI solutions"]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "project-1",
+      "featured": true,
+      "img": null,
+      "color": "p1",
+      "es": {
+        "type": "Software · Full Stack",
+        "name": "Nombre del Proyecto 1",
+        "desc": "Breve descripción del proyecto: qué problema resuelve, tecnologías utilizadas y resultado para el cliente."
+      },
+      "en": {
+        "type": "Software · Full Stack",
+        "name": "Project Name 1",
+        "desc": "Brief project description: what problem it solves, technologies used and outcome for the client."
+      },
+      "url": "#",
+      "tags": ["React,js", "Node.js", ".Net", "SQL Server", "MongoDB", "AWS", "Azure"]
+    },
+    {
+      "id": "project-2",
+      "featured": false,
+      "img": null,
+      "color": "p2",
+      "es": {
+        "type": "Branding · Identidad Visual",
+        "name": "Nombre del Proyecto 2",
+        "desc": "Descripción breve del proyecto y su resultado."
+      },
+      "en": {
+        "type": "Branding · Visual Identity",
+        "name": "Project Name 2",
+        "desc": "Brief project description and outcome."
+      },
+      "url": "#",
+      "tags": ["React,js", "Node.js", ".Net", "SQL Server", "MongoDB", "AWS", "Azure"]
+    },
+    {
+      "id": "project-3",
+      "featured": false,
+      "img": null,
+      "color": "p3",
+      "es": {
+        "type": "Diseño Web · Landing Page",
+        "name": "Nombre del Proyecto 3",
+        "desc": "Descripción breve del proyecto y su resultado."
+      },
+      "en": {
+        "type": "Web Design · Landing Page",
+        "name": "Project Name 3",
+        "desc": "Brief project description and outcome."
+      },
+      "url": "#",
+      "tags": ["React,js", "Node.js", ".Net", "SQL Server", "MongoDB", "AWS", "Azure"]
+    }
+  ],
+
+  "contact": {
+    "es": {
+      "title": ["¿Tenés un", "proyecto en", "<acc>mente?</acc>"],
+      "body": "Contame qué necesitás. Respondo en menos de 24 horas y sin compromiso. Trabajo con clientes de toda Argentina y Latinoamérica.",
+      "form": {
+        "name": "Nombre",
+        "name_ph": "Tu nombre",
+        "email_ph": "tu@email.com",
+        "type": "Tipo de proyecto",
+        "type_ph": "Software / Branding / Landing page / Otro",
+        "message": "Mensaje",
+        "message_ph": "Contame tu idea o proyecto...",
+        "submit": "Enviar mensaje →"
+      }
+    },
+    "en": {
+      "title": ["Got a project", "in", "<acc>mind?</acc>"],
+      "body": "Tell me what you need. I respond within 24 hours, no strings attached. I work with clients across Argentina and Latin America.",
+      "form": {
+        "name": "Name",
+        "name_ph": "Your name",
+        "email_ph": "your@email.com",
+        "type": "Project type",
+        "type_ph": "Software / Branding / Landing page / Other",
+        "message": "Message",
+        "message_ph": "Tell me about your idea or project...",
+        "submit": "Send message →"
+      }
+    }
+  },
+
+  "nav": {
+    "es": { "services": "Servicios", "projects": "Proyectos", "contact": "Contacto", "cta": "Hablemos" },
+    "en": { "services": "Services",  "projects": "Projects",  "contact": "Contact",  "cta": "Let's talk" }
+  },
+
+  "footer": {
+    "es": { "services": "Servicios", "projects": "Proyectos", "contact": "Contacto" },
+    "en": { "services": "Services",  "projects": "Projects",  "contact": "Contact"  }
+  }
+}

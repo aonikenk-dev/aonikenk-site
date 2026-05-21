@@ -1,0 +1,14 @@
+{
+  "name": "aonikenk-site",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^6.0.0",
+    "sass": "^1.70.0"
+  }
+}

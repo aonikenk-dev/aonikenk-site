@@ -1,0 +1,44 @@
+---
+import Isotipo from './Isotipo.astro';
+import LangSwitch from './LangSwitch.astro';
+import data from '../data/site.json';
+const { site } = data;
+---
+
+<section id="splash">
+  <div class="splash-bg"></div>
+  <div class="splash-grid"></div>
+
+  <!-- lang switch top-right -->
+  <div class="splash-lang"><LangSwitch /></div>
+
+  <!-- terrain SVG -->
+  <svg class="splash-terrain" viewBox="0 0 1440 200" preserveAspectRatio="none">
+    <polyline points="0,160 180,115 360,138 540,78 720,104 900,52 1080,82 1260,32 1440,56 1440,200 0,200" fill="none" stroke="#C0623A" stroke-width="1"/>
+    <polyline points="0,178 220,155 440,170 660,138 880,158 1100,122 1320,144 1440,112 1440,200 0,200" fill="none" stroke="#3D6B4F" stroke-width="1"/>
+  </svg>
+
+  <div class="splash-content">
+    <div class="splash-iso">
+      <Isotipo size={110} />
+    </div>
+    <div class="splash-wm">
+      {site.name}<span class="dot">{site.tld}</span><span class="cursor-blink"></span>
+    </div>
+    <div class="splash-tagline">{site.tagline}</div>
+    <div style="margin-top:18px;">
+      <span class="splash-slogan">{site.cover_slogan}</span>      
+      <span class="splash-location">{site.location}</span>
+    </div>
+  </div>
+
+  <!-- scroll down arrow -->
+  <a href="#main-anchor" class="splash-arrow" id="splashArrow">
+    <div class="arrow-c">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <polyline points="19,12 12,19 5,12"/>
+      </svg>
+    </div>
+  </a>
+</section>

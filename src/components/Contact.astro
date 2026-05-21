@@ -1,0 +1,112 @@
+---
+import data from '../data/site.json';
+const { contact, site } = data;
+---
+
+<section class="content" id="contact">
+  <div class="s-inner">
+    <div class="cnt-grid">
+
+      <!-- Left: info -->
+      <div class="reveal">
+        <div class="eyebrow">
+          <span data-es>Contacto</span><span data-en>Contact</span>
+        </div>
+
+        <h2 class="cnt-title" data-es>
+          ¿Tenés un<br>proyecto en<br><span class="acc">mente?</span>
+        </h2>
+        <h2 class="cnt-title" data-en>
+          Got a project<br>in<br><span class="acc">mind?</span>
+        </h2>
+
+        <p class="cnt-text" data-es>{contact.es.body}</p>
+        <p class="cnt-text" data-en>{contact.en.body}</p>
+
+        <div class="cnt-links">
+          <a href={`mailto:${site.email}`} class="cnt-link">
+            <div class="clink-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8896A8" stroke-width="1.5" stroke-linecap="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2,4 L12,13 L22,4"/>
+              </svg>
+            </div>
+            {site.email}
+            <span class="clink-arr">↗</span>
+          </a>
+
+          <a href={site.socials.linkedin} target="_blank" rel="noopener" class="cnt-link">
+            <div class="clink-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8896A8" stroke-width="1.5" stroke-linecap="round">
+                <rect x="2" y="2" width="20" height="20" rx="3"/>
+                <path d="M7,10 L7,17 M7,7 L7,7.5 M11,17 L11,13 C11,11.3 13,10.5 14,12 L14,17 M17,10 L17,17"/>
+              </svg>
+            </div>
+            LinkedIn
+            <span class="clink-arr">↗</span>
+          </a>
+
+          <a href={site.socials.github} target="_blank" rel="noopener" class="cnt-link">
+            <div class="clink-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8896A8" stroke-width="1.5" stroke-linecap="round">
+                <path d="M9,19c-5,1.5-5-2.5-7-3m14,6v-3.87a3.37,3.37,0,0,0-.94-2.61c3.14-.35,6.44-1.54,6.44-7A5.44,5.44,0,0,0,20,4.77,5.07,5.07,0,0,0,19.91,1S18.73.65,16,2.48a13.38,13.38,0,0,0-7,0C6.27.65,5.09,1,5.09,1A5.07,5.07,0,0,0,5,4.77a5.44,5.44,0,0,0-1.5,3.78c0,5.42,3.3,6.61,6.44,7A3.37,3.37,0,0,0,9,18.13V22"/>
+              </svg>
+            </div>
+            {site.socials.github.replace('https://', '')}
+            <span class="clink-arr">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="reveal d2">
+        <form class="cnt-form" id="contact-form">
+          <div class="f-row">
+            <div class="f-group">
+              <label class="f-label" data-es>{contact.es.form.name}</label>
+              <label class="f-label" data-en>{contact.en.form.name}</label>
+              <input
+                type="text" name="name" class="f-input"
+                data-ph-es={contact.es.form.name_ph}
+                data-ph-en={contact.en.form.name_ph}
+              />
+            </div>
+            <div class="f-group">
+              <label class="f-label">Email</label>
+              <input
+                type="email" name="email" class="f-input"
+                data-ph-es={contact.es.form.email_ph}
+                data-ph-en={contact.en.form.email_ph}
+              />
+            </div>
+          </div>
+
+          <div class="f-group">
+            <label class="f-label" data-es>{contact.es.form.type}</label>
+            <label class="f-label" data-en>{contact.en.form.type}</label>
+            <input
+              type="text" name="project_type" class="f-input"
+              data-ph-es={contact.es.form.type_ph}
+              data-ph-en={contact.en.form.type_ph}
+            />
+          </div>
+
+          <div class="f-group">
+            <label class="f-label" data-es>{contact.es.form.message}</label>
+            <label class="f-label" data-en>{contact.en.form.message}</label>
+            <textarea
+              name="message" class="f-area"
+              data-ph-es={contact.es.form.message_ph}
+              data-ph-en={contact.en.form.message_ph}
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span data-es>{contact.es.form.submit}</span>
+            <span data-en>{contact.en.form.submit}</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

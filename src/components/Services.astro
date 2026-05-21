@@ -1,0 +1,63 @@
+---
+import data from '../data/site.json';
+const { services } = data;
+
+// SVG icons keyed by service.icon
+const icons: Record<string, string> = {
+  terminal: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="1" y="5" width="30" height="22" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <rect x="1" y="5" width="30" height="6" rx="2" fill="#1E242D"/>
+    <circle cx="7" cy="8" r="1.5" fill="#C0623A"/>
+    <circle cx="12" cy="8" r="1.5" fill="#C8960C" opacity=".7"/>
+    <circle cx="17" cy="8" r="1.5" fill="#3D6B4F"/>
+    <path d="M8,18 L12,22 L8,26" stroke="#7BAFC4" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="15" y1="26" x2="24" y2="26" stroke="#3D6B4F" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>`,
+  triangle: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <polygon points="16,3 27,22 5,22" fill="none" stroke="#C0623A" stroke-width="1.5" stroke-linejoin="round"/>
+    <line x1="10" y1="16" x2="22" y2="16" stroke="#C0623A" stroke-width="1.5"/>
+    <circle cx="16" cy="26" r="2" fill="#7BAFC4"/>
+    <path d="M3,8 L3,3 L8,3" stroke="#3D6B4F" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M29,8 L29,3 L24,3" stroke="#3D6B4F" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+  monitor: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="2" y="4" width="28" height="18" rx="1.5" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="16" y1="22" x2="16" y2="28" stroke="#C0623A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="10" y1="28" x2="22" y2="28" stroke="#C0623A" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="6" y="8" width="8" height="6" rx="1" fill="#1E242D" stroke="#3D6B4F" stroke-width="1"/>
+    <line x1="17" y1="9" x2="25" y2="9" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="17" y1="12" x2="22" y2="12" stroke="#2A3140" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="25" cy="15" r="1.5" fill="#7BAFC4"/>
+  </svg>`,
+};
+---
+
+<section class="content" id="services">
+  <div class="s-inner">
+    <div class="s-head reveal">
+      <div class="eyebrow">
+        <span data-es>Servicios</span><span data-en>Services</span>
+      </div>
+      <h2 class="s-title">
+        <span data-es>Lo que <span class="dim">construimos</span></span>
+        <span data-en>What we <span class="dim">build</span></span>
+      </h2>
+    </div>
+
+    <div class="srv-grid">
+      {services.map((s, i) => (
+        <div class={`srv-card reveal d${i + 1}`}>
+          <div class="srv-num">{s.num}</div>
+          <div class="srv-icon" set:html={icons[s.icon]} />
+          <div class="srv-name" data-es>{s.es.name}</div>
+          <div class="srv-name" data-en>{s.en.name}</div>
+          <div class="srv-desc" data-es>{s.es.desc}</div>
+          <div class="srv-desc" data-en>{s.en.desc}</div>
+          {s.servicesItems.map((serviceItem, j) => (
+            <div>· {serviceItem} </div>
+          ))}          
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

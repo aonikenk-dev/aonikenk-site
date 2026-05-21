@@ -1,0 +1,91 @@
+---
+import Isotipo from './Isotipo.astro';
+import data from '../data/site.json';
+const { hero } = data;
+---
+
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <div class="hero-iso-bg">
+    <Isotipo size={300} opacity={0.1} />
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span>Software · Branding · Solutions</span>
+    </div>
+
+    <!-- ES -->
+    <h1 class="hero-h1" data-es>
+      {hero.es.title[0]}<br>
+      <span class="acc">{hero.es.title[1]}</span><br>
+      <span class="dim">{hero.es.title[2]}</span>
+    </h1>
+    <div class="hero-sub" data-es>{hero.es.sub}</div>
+    <p class="hero-p" data-es>{hero.es.body}</p>
+    <div class="hero-btns" data-es>
+      <a href="#projects" class="btn-p">{hero.es.cta_primary}</a>
+      <a href="#contact"  class="btn-g">{hero.es.cta_secondary}</a>
+    </div>
+
+    <!-- EN -->
+    <h1 class="hero-h1" data-en>
+      {hero.en.title[0]}<br>
+      <span class="acc">{hero.en.title[1]}</span><br>
+      <span class="dim">{hero.en.title[2]}</span>
+    </h1>
+    <div class="hero-sub" data-en>{hero.en.sub}</div>
+    <p class="hero-p" data-en>{hero.en.body}</p>
+    <div class="hero-btns" data-en>
+      <a href="#projects" class="btn-p">{hero.en.cta_primary}</a>
+      <a href="#contact"  class="btn-g">{hero.en.cta_secondary}</a>
+    </div>
+  </div>
+
+  <svg class="hero-terrain" viewBox="0 0 1440 240" preserveAspectRatio="none">
+    <polyline points="0,190 160,148 320,168 480,105 640,135 800,76 960,110 1120,52 1280,82 1440,38 1440,240 0,240" fill="none" stroke="#C0623A" stroke-width="1"/>
+    <polyline points="0,215 200,195 400,208 600,178 800,200 1000,165 1200,188 1440,148 1440,240 0,240" fill="none" stroke="#3D6B4F" stroke-width="1"/>
+  </svg>
+</section>
+
+<style lang="scss">
+  @use '../styles/tokens' as *;
+
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 140px 48px 80px; position: relative; overflow: hidden;
+  }
+  .hero-glow  { position:absolute; top:20%; right:5%; width:600px; height:600px; background:radial-gradient(ellipse,rgba(192,98,58,.07) 0%,transparent 70%); pointer-events:none; }
+  .hero-glow2 { position:absolute; bottom:10%; left:-5%; width:400px; height:400px; background:radial-gradient(ellipse,rgba(61,107,79,.06) 0%,transparent 70%); pointer-events:none; }
+  .hero-grid  { position:absolute; inset:0; background-image:linear-gradient(rgba(42,49,64,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(42,49,64,.2) 1px,transparent 1px); background-size:80px 80px; pointer-events:none; mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%); }
+  .hero-terrain { position:absolute; bottom:0; left:0; right:0; height:240px; opacity:.055; pointer-events:none; }
+  .hero-iso-bg  { position:absolute; right:8%; top:50%; transform:translateY(-50%); opacity:.1; pointer-events:none; animation:float 8s ease-in-out infinite; }
+  .hero-content { position:relative; z-index:2; max-width:1100px; margin:0 auto; width:100%; }
+
+  .hero-eyebrow {
+    display:flex; align-items:center; gap:12px; margin-bottom:32px;
+    opacity:0; animation:fadeUp .8s ease .05s forwards;
+  }
+  .eyebrow-line { width:32px; height:1px; background:var(--sienna); }
+  .hero-eyebrow span { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--sienna); }
+
+  .hero-h1 {
+    font-family:$font-display; font-weight:800; font-size:clamp(52px,8.5vw,96px);
+    color:var(--white); letter-spacing:-0.04em; line-height:.95; margin-bottom:8px;
+    opacity:0; animation:fadeUp .9s ease .2s forwards;
+    .acc { color:var(--sienna); }
+    .dim { -webkit-text-stroke:1px rgba(238,243,248,.22); color:transparent; }
+  }
+  .hero-sub  { opacity:0; animation:fadeUp .9s ease .35s forwards; font-size:clamp(13px,1.4vw,17px); color:var(--subtle); margin-top:8px; }
+  .hero-p    { margin-top:36px; max-width:460px; font-size:13px; color:var(--subtle); line-height:1.9; opacity:0; animation:fadeUp .9s ease .48s forwards; }
+  .hero-btns { margin-top:44px; display:flex; gap:16px; align-items:center; opacity:0; animation:fadeUp .9s ease .62s forwards; }
+
+  @media(max-width:$bp-mobile) {
+    .hero { padding:100px 24px 60px; }
+    .hero-iso-bg { display:none; }
+  }
+</style>
