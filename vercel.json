@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/proposals/:path*",
-      "destination": "https://aonikenk-proposals.vercel.app/:path*"
+      "destination": "https://aonikenk-proposals.vercel.app/proposals/:path*"
     }
   ]
 }
