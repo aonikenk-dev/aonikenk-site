@@ -8,7 +8,7 @@
     "email": "hello@aonikenk.dev",
     "location": "Patagonia, Argentina",
     "socials": {
-      "linkedin": "https://linkedin.com/in/[your-username]",
+      "linkedin": "https://linkedin.com/in/aonikenk.dev",
       "github": "https://github.com/aonikenk-dev"
     }
   },
@@ -36,7 +36,7 @@
       "num": "01",
       "icon": "terminal",
       "es": {
-        "name": "Desarrollo de Software y Diseño Web a medida",
+        "name": "Desarrollo de Software y Diseño Web",
         "desc": "Desarrollo de plataformas web y herramientas internas diseñadas para tus procesos de negocio, APIs y sistemas a medida. Diseño UI/UX, desarrollo responsive y optimización SEO. Desde MVPs hasta plataformas complejas, con foco en rendimiento y escalabilidad."
       },
       "en": {
@@ -72,7 +72,65 @@
         "desc": "AI and Automation solutions designed to simplify complex workflows, boost efficiency, and drive tangible outcomes. Using data-driven insights, smart process automation, and advanced technology, we help organizations make better decisions and cut down on delays."
       },
       "servicesItems": ["AI Assistants", "Chatbots", "Process automation", "Data analysis", "Custom AI solutions"]
-    }
+    },
+    {
+      "id": "discovery",
+      "num": "06",
+      "icon": "discovery",
+      "es": {
+        "name": "Product Discovery",
+        "desc": "Validación de ideas y definición de producto antes de construir: investigación de usuarios, mapeo de problemas, prototipado y hoja de ruta para lanzar lo correcto."
+      },
+      "en": {
+        "name": "Product Discovery",
+        "desc": "Idea validation and product definition before building: user research, problem mapping, prototyping and roadmap to launch the right thing."
+      },
+      "servicesItems": [
+        "User research",
+        "Prototyping",
+        "Roadmap",
+        "MVP"
+      ]
+    },
+    {
+      "id": "networking",
+      "num": "04",
+      "icon": "network",
+      "es": {
+        "name": "Networking",
+        "desc": "Diseño e instalación de infraestructura de red: cableado estructurado, canalizaciones, racks, switches y componentes para redes comerciales e industriales."
+      },
+      "en": {
+        "name": "Networking",
+        "desc": "Network infrastructure design and installation: structured cabling, conduits, racks, switches and components for commercial and industrial networks."
+      },
+      "servicesItems": [
+        "Structured cabling",
+        "LAN/WAN networks",
+        "Racks installation",
+        "Rugged housing"
+      ]
+    },
+    {
+      "id": "security",
+      "num": "05",
+      "icon": "shield",
+      "es": {
+        "name": "Seguridad",
+        "desc": "Instalación y configuración de sistemas de seguridad: cámaras IP, paneles de alarma, control de acceso a puertas y monitoreo remoto para empresas."
+      },
+      "en": {
+        "name": "Security",
+        "desc": "Installation and setup of security systems: IP cameras, alarm panels, door access control and remote monitoring for businesses."
+      },
+      "servicesItems": [
+        "IP cameras",
+        "Alarms and monitoring",
+        "Access control",
+        "Network Security",
+        "Secure IoT Connectivity"
+      ]
+    }    
   ],
 
   "projects": [
