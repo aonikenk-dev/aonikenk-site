@@ -1,0 +1,208 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import data from '../../data/site.json';
+
+// ── Static paths — one page per project ──────────────────────
+export function getStaticPaths() {
+  return data.projects.map(p => ({
+    params: { slug: p.slug },
+    props:  { project: p },
+  }));
+}
+
+const { project } = Astro.props;
+const { es, en, tags, img, github, live } = project;
+
+const icons = {
+  patient: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <!-- head -->
+    <circle cx="16" cy="10" r="6" stroke="#C0623A" stroke-width="1.5" fill="none"/>
+    <!-- body -->
+    <path d="M8,26c0-4.4,3.6-8,8-8s8,3.6,8,8" stroke="#C0623A" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- medical cross -->
+    <line x1="16" y1="14" x2="16" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="14" y1="16" x2="18" y2="16" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+  calendar: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="2" y="4" width="28" height="22" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="2" y1="10" x2="30" y2="10" stroke="#C0623A" stroke-width="1 .5"/>
+    <line x1="8" y1="2" x2="8" y2" stroke="#C0623A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="24" y1="2" x2="24" y2="10" stroke="#C0623A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="6" y1="14" x2="26" y2="14" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="18" x2="26" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="22" x2="26" y2="22" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+  clipboard: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="8" y="2" width="16" height="28" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <rect x="12" y="6" width="8" height="4" rx="1" fill="#1E242D" stroke="#3D6B4F" stroke-width="1"/>
+    <line x1="14" y1="7" x2="18" y2="7" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="14" y1="10" x2="18" y2="10" stroke="#2A3140" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="14" x2="22" y2="14" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="18" x2="22" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="22" x2="22" y2="22" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+  prescription: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="6" y="4" width="20" height="24" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="6" y1="10" x2="26" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="10" y1="14" x2="22" y2="14" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="18" x2="22" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="22" x2="22" y2="22" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="10" y1="26" x2="22" y2="26" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+  uiDesign: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="4" y="4" width="24" height="24" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="4" y1="10" x2="28" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="10" y1="4" x2="10" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="22" y1="4" x2="22" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="6" y1="14" x2="26" y2="14" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="18" x2="26" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="22" x2="26" y2="22" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="26" x2="26" y2="26" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+  landing: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="2" y="4" width="28" height="22" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="2" y1="10" x2="30" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="8" y1="2" x2="8" y2="10" stroke="#C0623A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="24" y1="2" x2="24" y2="10" stroke="#C0623A" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="6" y1="14" x2="26" y2="14" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="18" x2="26" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="22" x2="26" y2="22" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="26" x2="26" y2="26" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+  dashboard: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="4" y="4" width="24" height="24" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="4" y1="10" x2="28" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="10" y1="4" x2="10" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="22" y1="4" x2="22" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="6" y1="14" x2="26" y2="14" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="18" x2="26" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="22" x2="26" y2="22" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="26" x2="26" y2="26" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>`,
+  branding: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <rect x="4" y="4" width="24" height="24" rx="2" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="4" y1="10" x2="28" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="10" y1="4" x2="10" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="22" y1="4" x2="22" y2="10" stroke="#C0623A" stroke-width="1.5"/>
+    <line x1="6" y1="14" x2="26" y2="14" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="18" x2="26" y2="18" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="22" x2="26" y2="22" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="6" y1="26" x2="26" y2="26" stroke="#3D6B4F" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+};
+---
+
+<ProjectLayout title={project.name}>
+  <article class="project-detail">
+
+    <!-- Hero image -->
+    <div class="pd-hero">
+      {img
+        ? <img src={img} alt={es.name} class="pd-hero-img" />
+        : <div class="pd-hero-placeholder">
+            <svg width="64" height="64" viewBox="0 0 100 100" fill="none" opacity=".3">
+              <polygon points="50,15 80,68 20,68" fill="none" stroke="#C0623A" stroke-width="2.5" stroke-linejoin="round"/>
+              <line x1="33" y1="49" x2="67" y2="49" stroke="#C0623A" stroke-width="2.5"/>
+              <circle cx="50" cy="78" r="4" fill="#7BAFC4"/>
+            </svg>
+          </div>
+      }
+      <div class="pd-hero-overlay"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="pd-content">
+
+      <!-- Header -->
+      <header class="pd-header reveal">
+        <div class="pd-type">
+          <span>{project.type}</span>
+        </div>
+        <h1 class="pd-title">{project.name}</h1>
+        <div class="pd-tagline">{project.tagline}</div>
+        <div class="pd-tags">
+          {tags.map(tag => <span class="pd-tag">{tag}</span>)}
+        </div>
+      </header>
+
+      <div class="pd-rule"></div>
+
+      <!-- Description -->
+      <div class="pd-body reveal">
+        <div class="pd-eyebrow">
+          <span data-es>Sobre el proyecto</span>
+          <span data-en>About the project</span>
+        </div>
+        <p class="pd-desc" data-es>{es.desc}</p>
+        <p class="pd-desc" data-en>{en.desc}</p>
+      </div>
+
+      <!-- Details -->
+      {project.details && project.details.map((detail, i) => (
+        <div class="pd-body reveal">
+           
+            
+          <div class="pd-eyebrow">
+            <span data-es>{detail.eyebrow.es}</span>
+            <span data-en>{detail.eyebrow.en}</span>
+          </div>
+          <h2 class="pd-details-title">
+            <span data-es>{detail.title.es} <span class="dim" data-es>{detail.dim.es}</span></span>
+            <span data-en>{detail.title.en} <span class="dim" data-en>{detail.dim.en}</span></span>
+          </h2>
+          <div style="margin-bottom: 20px;">
+            <p class="pd-detail-desc" data-es>{detail.desc.es}</p>
+            <p class="pd-detail-desc" data-en>{detail.desc.en}</p>
+          </div>
+          {detail.type === 'card' ? (
+            <div class="pd-details-grid">
+              {detail.items.map(item => (
+                <div class={`pd-details-card reveal d${Math.min(i % 3 + 1, 3)}`}>
+                  <div class="pd-detail-icon" set:html={icons[item.icon]} />
+                  <div class="pd-detail-name" data-es>{item.title.es}</div>
+                  <div class="pd-detail-name" data-en>{item.title.en}</div>
+                  <div class="pd-detail-desc" data-es>{item.desc.es}</div>
+                  <div class="pd-detail-desc" data-en>{item.desc.en}</div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            detail.items.map(i => <p class="pd-detail-desc">{i}</p>)
+          )}
+        </div>
+      ))}
+
+      <!-- Links -->
+      <div class="pd-links reveal">
+        {live && (
+          <a href={live} target="_blank" rel="noopener" class="pd-link pd-link-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12,2 a15.3,15.3 0 0,1 4,10 15.3,15.3 0 0,1 -4,10 15.3,15.3 0 0,1 -4,-10 15.3,15.3 0 0,1 4,-10z"/>
+            </svg>
+            <span data-es>Ver sitio en vivo</span>
+            <span data-en>View live site</span>
+          </a>
+        )}
+        <!-- NOTE: remove github link for privacy {github && (
+          <a href={github} target="_blank" rel="noopener" class="pd-link pd-link-ghost">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M9,19c-5,1.5-5-2.5-7-3m14,6v-3.87a3.37,3.37,0,0,0-.94-2.61c3.14-.35,6.44-1.54,6.44-7A5.44,5.44,0,0,0,20,4.77,5.07,5.07,0,0,0,19.91,1S18.73.65,16,2.48a13.38,13.38,0,0,0-7,0C6.27.65,5.09,1,5.09,1A5.07,5.07,0,0,0,5,4.77a5.44,5.44,0,0,0-1.5,3.78c0,5.42,3.3,6.61,6.44,7A3.37,3.37,0,0,0,9,18.13V22"/>
+            </svg>
+            GitHub
+          </a>
+        )} -->
+        <a href="/#projects" class="pd-link pd-link-ghost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12,19 5,12 12,5"/>
+          </svg>
+          <span data-es>Ver todos los proyectos</span>
+          <span data-en>All projects</span>
+        </a>
+      </div>
+
+    </div>
+  </article>
+</ProjectLayout>

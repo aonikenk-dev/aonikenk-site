@@ -12,24 +12,30 @@
       "github": "https://github.com/aonikenk-dev"
     }
   },
-
   "hero": {
     "es": {
-      "title": ["Experiencias digitales", "que", "transforman."],
+      "title": [
+        "Experiencias digitales",
+        "que",
+        "transforman."
+      ],
       "sub": "Digital development studio.",
-      "body": "Estudio de desarrollo de software y soluciones de TI especializado en sistemas de software modernos, interfaces minimalistas y una sólida identidad visual. Creamos con personalidad y diseñamos experiencias digitales que transforman.",
+      "body": "Estudio de desarrollo de software, branding y soluciones de IT especializado en sistemas modernos, interfaces minimalistas y una sólida identidad visual. Creamos con personalidad y diseñamos experiencias digitales que transforman.",
       "cta_primary": "Ver proyectos",
       "cta_secondary": "Hablemos →"
     },
     "en": {
-      "title": ["Digital experiences", "that", "transform."],
+      "title": [
+        "Digital experiences",
+        "that",
+        "transform."
+      ],
       "sub": "Digital development studio.",
-      "body": "Software development and IT solutions studio focused on modern software systems, minimal interfaces and strong visual identity. We craft with character and design digital experiences that transform.",
+      "body": "Software development, branding and IT solutions studio focused on modern software systems, minimal interfaces and strong visual identity. We craft with character and design digital experiences that transform.",
       "cta_primary": "View projects",
       "cta_secondary": "Let's talk →"
     }
   },
-
   "services": [
     {
       "id": "software",
@@ -43,7 +49,13 @@
         "name": "Software Development & Web Design",
         "desc": "Web platforms and in-house tools designed for your business processes, APIs and tailored systems. UI/UX design, responsive development and SEO optimization. From MVPs to complex platforms, focused on performance and scalability."
       },
-      "servicesItems": ["Websites", "Dashboards", "CRMs", "ERPs", "Databases and reports"]
+      "servicesItems": [
+        "Websites",
+        "Dashboards",
+        "CRMs",
+        "ERPs",
+        "Databases and reports"
+      ]
     },
     {
       "id": "branding",
@@ -57,7 +69,13 @@
         "name": "Branding & Identity",
         "desc": "Brand design from scratch: logo, palette, typography and brand guidelines, crafted to define your voice and ensure a consistent look and feel across every touchpoint. We build brands with personality, visual clarity and memorable impact so they stand out, connect with audiences and endure."
       },
-      "servicesItems": ["Logo Design", "Brand strategy", "Visual identity", "Digital Marketing", "Social Media"]
+      "servicesItems": [
+        "Logo Design",
+        "Brand strategy",
+        "Visual identity",
+        "Digital Marketing",
+        "Social Media"
+      ]
     },
     {
       "id": "ai",
@@ -71,7 +89,13 @@
         "name": "AI & Automation",
         "desc": "AI and Automation solutions designed to simplify complex workflows, boost efficiency, and drive tangible outcomes. Using data-driven insights, smart process automation, and advanced technology, we help organizations make better decisions and cut down on delays."
       },
-      "servicesItems": ["AI Assistants", "Chatbots", "Process automation", "Data analysis", "Custom AI solutions"]
+      "servicesItems": [
+        "AI Assistants",
+        "Chatbots",
+        "Process automation",
+        "Data analysis",
+        "Custom AI solutions"
+      ]
     },
     {
       "id": "discovery",
@@ -130,69 +154,209 @@
         "Network Security",
         "Secure IoT Connectivity"
       ]
-    }    
-  ],
-
-  "projects": [
-    {
-      "id": "project-1",
-      "featured": true,
-      "img": null,
-      "color": "p1",
-      "es": {
-        "type": "Software · Full Stack",
-        "name": "Nombre del Proyecto 1",
-        "desc": "Breve descripción del proyecto: qué problema resuelve, tecnologías utilizadas y resultado para el cliente."
-      },
-      "en": {
-        "type": "Software · Full Stack",
-        "name": "Project Name 1",
-        "desc": "Brief project description: what problem it solves, technologies used and outcome for the client."
-      },
-      "url": "#",
-      "tags": ["React,js", "Node.js", ".Net", "SQL Server", "MongoDB", "AWS", "Azure"]
-    },
-    {
-      "id": "project-2",
-      "featured": false,
-      "img": null,
-      "color": "p2",
-      "es": {
-        "type": "Branding · Identidad Visual",
-        "name": "Nombre del Proyecto 2",
-        "desc": "Descripción breve del proyecto y su resultado."
-      },
-      "en": {
-        "type": "Branding · Visual Identity",
-        "name": "Project Name 2",
-        "desc": "Brief project description and outcome."
-      },
-      "url": "#",
-      "tags": ["React,js", "Node.js", ".Net", "SQL Server", "MongoDB", "AWS", "Azure"]
-    },
-    {
-      "id": "project-3",
-      "featured": false,
-      "img": null,
-      "color": "p3",
-      "es": {
-        "type": "Diseño Web · Landing Page",
-        "name": "Nombre del Proyecto 3",
-        "desc": "Descripción breve del proyecto y su resultado."
-      },
-      "en": {
-        "type": "Web Design · Landing Page",
-        "name": "Project Name 3",
-        "desc": "Brief project description and outcome."
-      },
-      "url": "#",
-      "tags": ["React,js", "Node.js", ".Net", "SQL Server", "MongoDB", "AWS", "Azure"]
     }
   ],
+  "projects": [
+    {
+      "id": "koonek",
+      "slug": "koonek",
+      "name": "Koonek",
+      "tagline": "AI-powered Healthcare Management Platform",
+      "type": "SaaS · HMP · HMS · AI",
+      "featured": true,
+      "img": "/img/projects/koonek-dashboard.png",
+      "color": "p1",
+      "show": true,
+      "tags": [
+        "HMS",
+        "HMP",
+        "Automation",
+        "IoT",
+        "AI Assistants"
+      ],
+      "es": {
+        "short": "Koonek es una plataforma de gestión sanitaria impulsada por IA y diseñada para centralizar la gestión de pacientes, la programación de turnos, los flujos de trabajo de las historias clínicas y la generación de recetas dentro de un espacio de trabajo clínico moderno y asistido por IA.",
+        "desc": "Koonek es una plataforma de gestión sanitaria impulsada por IA y desarrollada bajo el ecosistema aonikenk.dev. La plataforma cubre los flujos principales de una práctica médica: registro y gestión de pacientes, gestión de turnos, seguimiento de historial clínico y generación de recetas. A diferencia de otras soluciones, Koonek integra componentes de IA - Koonek Copilot y Koonek Agent - para asistir en la redacción clínica y la carga automatizada de historias clínicas. Esto permite a los profesionales de la salud optimizar su tiempo, reducir tareas administrativas y mejorar la calidad de la atención al paciente a través de flujos de trabajo inteligentes y automatizados."
+      },
+      "en": {
+        "short": "Koonek is an AI-powered healthcare management platform designed to centralize patient management, appointment scheduling, health record workflows and prescription generation within a modern AI-assisted clinical workspace.",
+        "desc": "Koonek is an AI-powered healthcare management platform built on the MERN stack and developed under the aonikenk.dev ecosystem. The platform covers the core workflows of a medical practice: patient registration and management, appointment scheduling, health record tracking, and prescription generation. Beyond traditional HMS functionality, the platform incorporates AI-assisted workflows through components such as Koonek Copilot and Koonek Agent, enabling intelligent clinical writing assistance and automated health record's document ingestion. This allows healthcare professionals to optimize their time, reduce administrative tasks, and enhance patient care quality through smart, automated workflows."
+      },
+      "url": "/projects/koonek",
+      "github": "https://github.com/avazquezcendron",
+      "details": [
+        {
+          "eyebrow": {"es": "Flujos principales", "en": "Core workflows"},
+          "title": {"es": "Construido alrededor", "en": "Built around"},
+          "dim": {"es": "de los flujos esenciales de una práctica médica moderna.", "en": "the essential workflows of a modern medical practice."},
+          "desc": {"es": "Koonek cubre los flujos principales de una práctica médica: gestión de pacientes, programación de turnos, seguimiento de historial clínico y generación de recetas.", "en": "Koonek covers the core workflows of a medical practice: patient management, appointment scheduling, health record tracking and prescription generation. "},
+          "type": "card",
+          "items": [
+            {
+              "title": {"es": "Gestión de pacientes", "en": "Patient Management"},
+              "desc": {"es": "Registro de pacientes centralizado, perfiles e historias clínicas longitudinales. Historial de consultas, gestión de obras sociales y prepagas.", "en": "Centralized patient registration, profiles and longitudinal health records. Medical care history, healthcare insurance and social security management."},
+              "icon": "patient"
+            },
+            {
+              "title": {"es": "Programación de turnos", "en": "Appointment Scheduling"},
+              "desc": {"es": "Flujos de trabajo de programación operativa diseñados para consultorios médicos independientes. Calendario de disponibilidad y recordatorios.", "en": "Operational scheduling workflows designed for independent medical practices. Availability calendar and reminders."},
+              "icon": "calendar"
+            },
+            {
+              "title": {"es": "Gestión de historias clínicas", "en": "Health Records Management"},
+              "desc": {"es": "Historias clínicas estructuradas con asistencia de IA en la redacción. Seguimiento de síntomas, diagnósticos y tratamientos. Carga de archivos y estudios médicos.", "en": "Structured health records with AI writing assistance. Tracking of symptoms, diagnoses, treatments. File and medical study uploads."},
+              "icon": "clipboard"
+            },
+            {
+              "title": {"es": "Generación de recetas", "en": "Prescription Generation"},
+              "desc": {"es": "Flujos de trabajo optimizados para la creación y gestión de recetas médicas integradas en el proceso clínico.", "en": "Streamlined prescription workflows integrated into the clinical process."},
+              "icon": "prescription"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osi-control",
+      "slug": "osi-control",
+      "name": "Osi Control & Computadoras",
+      "tagline": "Website and Admin Dashboard for IT Company",
+      "type": "Web Development · Branding",
+      "featured": false,
+      "img": "/img/projects/osi-control.jpg",
+      "color": "p2",
+      "show": true,
+      "tags": [
+        "Web Development",
+        "Branding",
+        "Custom Software",
+        "Admin Dashboard"
+      ],
+      "es": {
+        "short": "Sitio web y panel admin para empresa de IT. A su vez se incluyó dentro del proyecto, el rediseño de la marca, incorporando procesos de branding e identidad visual.",
+        "desc": "Se desarrollo un nueva identidad digital para la empresa OSI Control & Computadoras, una empresa especializada en servicios industriales y soluciones operativas para empresas. El proyecto incluyó un proceso integral de rebranding, la creación de una nueva identidad visual, el diseño y desarrollo de una landing page corporativa orientada a la captación de clientes, y la construcción de un dashboard administrativo para la gestión interna de operaciones."
+      },
+      "en": {
+        "short": "Website and admin dashboard for an IT services company. The project also included a full rebranding, incorporating branding and visual identity processes.",
+        "desc": "A full-stack project developed for an IT services company. It consists of two parts: a public-facing SPA landing page, featuring dedicated sections for retail shops, home users, and businesses; and an internal admin dashboard for managing company operations. The project covers the full scope from customer-facing UI to back-office tooling, delivered as a complete engagement."
+      },
+      "url": "/projects/osi-control",
+      "github": "https://github.com/avazquezcendron",
+      "live": "https://osi-web-site.web.app/",
+      "details": [
+        {
+          "eyebrow": {"es": "Objetivos y alcance del proyecto", "en": "Goals and project scope"},
+          "title": {"es": "Landing page pública", "en": "Landing page"},
+          "dim": {"es": "y dashboard administrativo.", "en": "and admin dashboard."},
+          "desc": {"es": "El objetivo principal fue modernizar la presencia digital de la marca, transmitir profesionalismo y confianza, y mejorar la experiencia tanto de clientes potenciales como de usuarios internos. Para ello se redefinió el sistema visual de la empresa, incluyendo paleta de colores, tipografía, componentes de interfaz y lineamientos de comunicación visual. A partir de este rebranding, el proyecto se dividió en dos partes principales: una landing page pública orientada a la captación de clientes, con secciones dedicadas para comercios, usuarios residenciales y empresas; y un dashboard administrativo interno para la gestión de operaciones de la empresa. Esto permitió cubrir tanto la experiencia del cliente como las necesidades de gestión interna en un solo proyecto integral. La landing page fue diseñada con una estructura enfocada en la conversión, destacando los servicios, la propuesta de valor, la trayectoria de la empresa y los canales de contacto. Se priorizó una experiencia responsive, accesible y optimizada para dispositivos móviles.", "en": "The main goal was to modernize the brand's digital presence, convey professionalism and trust, and enhance the experience for both potential clients and internal users. To achieve this, the company's visual system was redefined, including color palette, typography, interface components and visual communication guidelines. Based on this rebranding, the project was divided into two main parts: a public landing page oriented towards client acquisition, with dedicated sections for retail shops, home users and businesses; and an internal admin dashboard for managing company operations. This allowed covering both the customer experience and internal management needs in a single comprehensive project. The landing page was designed with a conversion-focused structure, highlighting services, value proposition, company background and contact channels. A responsive, accessible experience optimized for mobile devices was prioritized."},
+          "type": "card",
+          "items": [
+              {
+                "title": {"es": "Rebranding e identidad visual", "en": "Rebranding and visual identity"},
+                "desc": {"es": "", "en": ""},
+                "icon": "branding"
+              },
+              {
+                "title": {"es": "Diseño de sistema visual y componentes UI", "en": "Visual system and UI components"},
+                "desc": {"es": "", "en": ""},
+                "icon": "uiDesign"
+              },
+              {
+                "title": {"es": "Diseño UX/UI de landing page corporativa", "en": "Corporate landing page UX/UI design"},
+                "desc": {"es": "", "en": ""},
+                "icon": "landing"
+              },
+              {
+                "title": { "es": "Diseño de dashboard administrativo", "en": "Admin dashboard design"},
+                "desc": {"es": "", "en": ""},
+                "icon": "dashboard"
+              }
+          ]
 
+        },
+        {
+          "eyebrow": {"es": "Rebranding e identidad visual", "en": "Rebranding and visual identity"},
+          "title": {"es": "Rediseño completo de la marca.", "en": "Complete brand redesign."},
+          "dim": {"es": "", "en": ""},
+          "desc": {"es": "El proyecto incluyó un proceso integral de rebranding, que abarcó desde la investigación y definición de la nueva identidad de marca, hasta el diseño de un nuevo logo, paleta de colores, tipografía y manual de identidad visual. El objetivo fue crear una imagen moderna, profesional y coherente que reflejara los valores y servicios de la empresa, y que pudiera ser aplicada de manera consistente en todos los puntos de contacto con clientes y usuarios.", "en": "The project included a comprehensive rebranding process, covering everything from research and definition of the new brand identity to the design of a new logo, color palette, typography and brand guidelines. The goal was to create a modern, professional and cohesive image that reflected the company's values and services, and that could be applied consistently across all customer and user touchpoints."},
+          "type": "card",
+          "items": []
+        },
+        {
+          "eyebrow": {"es": "Tecnologías utilizadas", "en": "Technologies used"},
+          "title": {"es": "Angular, Firebase, Node.js, React y MongoDB.", "en": "Angular, Firebase, Node.js, React and MongoDB."},
+          "dim": {"es": "", "en": ""},
+          "desc": {"es": "El proyecto se desarrolló utilizando Angular para la landing page pública, con Firebase como backend serverless para autenticación y base de datos. El panel de administración interno se construyó con Node.js para el backend y React para la interfaz de usuario, con MongoDB como base de datos principal.", "en": "The project was developed using Angular for the public landing page, with Firebase as a serverless backend for authentication and database. The internal admin dashboard was built with Node.js for the backend and React for the user interface, with MongoDB as the primary database."},
+          "type": "card",
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "pomodorock",
+      "slug": "pomodorock",
+      "name": "PomodoRock",
+      "tagline": "Pomodoro Technique Productivity PWA",
+      "type": "PWA · Productivity",
+      "featured": false,
+      "img": "/img/projects/pomodorock.png",
+      "color": "p3",
+      "show": true,
+      "tags": [
+        "React.js",
+        "Redux",
+        "Firebase",
+        "PWA",
+        "SCSS"
+      ],
+      "es": {
+        "short": "PWA de productividad basada en la técnica Pomodoro.",
+        "desc": "PomodoRock es una Progressive Web App construida con React, Redux y Firebase, diseñada alrededor de la Técnica Pomodoro para ayudar a los usuarios a gestionar su foco y productividad. Permite dividir el trabajo en sesiones temporizadas, asignar etiquetas personalizadas y recibir notificaciones del browser al finalizar cada sesión. Incluye un dashboard de estadísticas powered by Chart.js que visualiza patrones de productividad: tiempo por etiqueta y días más productivos. Los usuarios pueden hacer login para sincronizar datos entre dispositivos vía Firebase, y la app funciona completamente offline gracias a su arquitectura PWA. UI construida con Material UI y styled-components, con soporte de dark mode e instalabilidad."
+      },
+      "en": {
+        "short": "Productivity PWA built with React and the Pomodoro Technique.",
+        "desc": "PomodoRock is a Progressive Web App built with React, Redux, and Firebase, designed around the Pomodoro Technique to help users manage their focus and productivity. The app allows users to break work into timed sessions, assign custom labels, and receive browser notifications when a session ends. It includes a statistics dashboard powered by Chart.js that visualizes productivity patterns. Users can sign in to sync data across devices via Firebase, and the app works fully offline thanks to its PWA architecture. UI built with Material UI and styled-components, with dark mode support and installability across any PWA-compatible browser."
+      },
+      "url": "/projects/pomodorock",
+      "github": "https://github.com/avazquezcendron"
+    },
+    {
+      "id": "online-resume",
+      "slug": "online-resume",
+      "name": "Online Resume",
+      "tagline": "Personal CV Website",
+      "type": "Web Design · Development",
+      "featured": false,
+      "img": "/img/projects/online-resume.png",
+      "color": "p1",
+      "show": false,
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "SCSS",
+        "jQuery",
+        "GitHub Pages"
+      ],
+      "es": {
+        "short": "CV online personal construido desde cero.",
+        "desc": "Resume online personal construido desde cero con HTML5, CSS3, SCSS y jQuery, deployado como sitio estático en GitHub Pages. En lugar de usar un constructor de sitios o generador de templates, el sitio fue codificado y customizado de punta a punta — cubriendo layout, diseño responsive, theming con SCSS y secciones interactivas. Sirve como representación viva y siempre actualizada de la experiencia profesional, skills y trabajos de portfolio, accesible desde un dominio propio."
+      },
+      "en": {
+        "short": "Personal online CV built from scratch.",
+        "desc": "A personal online CV built from scratch using HTML5, CSS3, SCSS, and jQuery, deployed as a static site via GitHub Pages. Rather than using a website builder or template generator, the site was hand-coded and customized end-to-end — covering layout, responsive design, SCSS theming, and interactive sections. It serves as a live, always up-to-date representation of professional experience, skills, and portfolio work, accessible at a custom domain."
+      },
+      "url": "/projects/online-resume",
+      "github": "https://github.com/avazquezcendron/my-resume",
+      "live": "https://resume.aonikenk.dev"
+    }
+  ],
   "contact": {
     "es": {
-      "title": ["¿Tenés un", "proyecto en", "<acc>mente?</acc>"],
+      "title": [
+        "¿Tenés un",
+        "proyecto en",
+        "<acc>mente?</acc>"
+      ],
       "body": "Contame qué necesitás. Respondo en menos de 24 horas y sin compromiso. Trabajo con clientes de toda Argentina y Latinoamérica.",
       "form": {
         "name": "Nombre",
@@ -206,7 +370,11 @@
       }
     },
     "en": {
-      "title": ["Got a project", "in", "<acc>mind?</acc>"],
+      "title": [
+        "Got a project",
+        "in",
+        "<acc>mind?</acc>"
+      ],
       "body": "Tell me what you need. I respond within 24 hours, no strings attached. I work with clients across Argentina and Latin America.",
       "form": {
         "name": "Name",
@@ -220,14 +388,30 @@
       }
     }
   },
-
   "nav": {
-    "es": { "services": "Servicios", "projects": "Proyectos", "contact": "Contacto", "cta": "Hablemos" },
-    "en": { "services": "Services",  "projects": "Projects",  "contact": "Contact",  "cta": "Let's talk" }
+    "es": {
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto",
+      "cta": "Hablemos"
+    },
+    "en": {
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact",
+      "cta": "Let's talk"
+    }
   },
-
   "footer": {
-    "es": { "services": "Servicios", "projects": "Proyectos", "contact": "Contacto" },
-    "en": { "services": "Services",  "projects": "Projects",  "contact": "Contact"  }
+    "es": {
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "en": {
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
   }
 }

@@ -17,8 +17,12 @@ const { projects } = data;
 
     <div class="prj-grid">
       {projects.map((p, i) => (
-        <div class={`prj-card${p.featured ? ' prj-featured' : ''} reveal${i > 0 ? ` d${i}` : ''}`}>
-          <div class={`prj-img ${p.featured ? 'tall' : 'normal'} ${p.color}`}>
+        p.show && 
+          <a
+            href={p.url}
+            class={`prj-card${p.featured ? ' prj-featured' : ''} reveal${i > 0 ? ` d${i % 2 + 1}` : ''}`}
+          >
+            <div class={`prj-img ${p.featured ? 'tall' : 'normal'} ${p.color}`}>
             {p.img
               ? <img src={p.img} alt={p.en.name} loading="lazy" />
               : (
@@ -41,19 +45,18 @@ const { projects } = data;
 
           <div class="prj-info">
             <div>
-              <div class="prj-type" data-es>{p.es.type}</div>
-              <div class="prj-type" data-en>{p.en.type}</div>
-              <div class="prj-name" data-es>{p.es.name}</div>
-              <div class="prj-name" data-en>{p.en.name}</div>
-              <div class="prj-desc" data-es>{p.es.desc}</div>
-              <div class="prj-desc" data-en>{p.en.desc}</div>
-            <div class="srv-tags">
-              {p.tags.map(tag => <span class="stag">{tag}</span>)}
+              <div class="prj-type">{p.type}</div>
+              <div class="prj-name">{p.name} · <span class="prj-tagline">{p.tagline}</span></div>
+              <div class="prj-desc" data-es>{p.es.short}</div>
+              <div class="prj-desc" data-en>{p.en.short}</div>
+              <div class="prj-tags">
+                {p.tags.slice(0, 3).map((t: string) => <span class="prj-tag">{t}</span>)}
+                {p.tags.length > 3 && <span class="prj-tag prj-tag-more">+{p.tags.length - 3}</span>}
+              </div>
             </div>
-            </div>
-            <a href={p.url} class="prj-arrow">↗</a>
+            <span class="prj-arrow">↗</span>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </div>

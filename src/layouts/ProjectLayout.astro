@@ -1,0 +1,110 @@
+---
+import Isotipo from '../components/Isotipo.astro';
+import Footer from '../components/Footer.astro';
+import data from '../data/site.json';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+}
+
+const {
+  title,
+  description = 'Project detail — aonikenk.dev',
+  lang = 'es',
+} = Astro.props;
+
+const { site } = data;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title} — aonikenk.dev</title>
+  <link rel="icon"             href="/favicon.ico" sizes="48x48" />
+  <link rel="icon"             href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Global styles -->
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+  </style>
+</head>
+<body data-lang={lang}>
+
+  <div id="cur"></div>
+  <div id="ring"></div>
+
+  <!-- Nav -->
+  <nav id="nav" class="scrolled">
+    <a href="/" class="nav-left">
+      <Isotipo size={24} />
+      <div class="nav-wm">aonikenk<span class="dot">.dev</span></div>
+    </a>
+    <a href="/#projects" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"/>
+        <polyline points="12,19 5,12 12,5"/>
+      </svg>
+      <span data-es>Volver</span>
+      <span data-en>Back</span>
+    </a>
+  </nav>
+
+  <slot />
+
+  <!-- Shared footer -->
+  <Footer />
+
+  <script>
+    import { initCursor } from '../scripts/cursor.js';
+    import { initLang   } from '../scripts/i18n.js';
+    import { initReveal } from '../scripts/reveal.js';
+    initCursor();
+    initLang();
+    initReveal();
+  </script>
+
+</body>
+</html>
+
+<style lang="scss" is:global>
+  @use '../styles/main.scss';
+  @use '../styles/tokens' as *;
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 48px;
+    transition: background .4s, padding .4s, border-bottom .4s;
+    pointer-events: all; opacity: 1;
+    transition: background .4s, padding .4s, opacity .4s;
+    &.scrolled { background: rgba(13,15,18,.92); backdrop-filter: blur(12px); padding: 16px 48px; border-bottom: 1px solid var(--border); }
+  }
+  .nav-left {
+    display: flex; align-items: center; gap: 10px; text-decoration: none;
+  }
+  .nav-wm {
+    font-family: $font-display; font-weight: 800; font-size: 18px;
+    color: var(--white); letter-spacing: -0.04em; display: flex; align-items: baseline;
+    .dot { color: var(--sienna); font-family: $font-mono; font-weight: 400; }
+  }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .nav-cta {
+    font-family: $font-mono; font-size: 11px; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--sienna); text-decoration: none; border: 1px solid var(--sienna);
+    padding: 8px 18px; transition: background .2s, color .2s;
+    &:hover { background: var(--sienna); color: var(--white); }
+  }
+
+  @media(max-width: $bp-mobile) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 12px 24px; }
+  }
+</style>
