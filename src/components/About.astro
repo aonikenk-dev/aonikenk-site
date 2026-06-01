@@ -1,0 +1,42 @@
+---
+import data from '../data/site.json';
+const { about } = data;
+---
+
+<section class="content" id="about">
+  <div class="s-inner">
+
+    <!-- Header -->
+    <div class="s-head reveal">
+      <div class="eyebrow">
+        <span data-es>{about.es.eyebrow}</span>
+        <span data-en>{about.en.eyebrow}</span>
+      </div>
+      <h2 class="s-title">
+        <span data-es>{about.es.title}</span>
+        <span data-en>{about.en.title}</span>
+      </h2>
+    </div>
+
+    <!-- Manifesto -->
+    <blockquote class="about-manifesto reveal">
+      <span class="about-manifesto-mark">"</span>
+      <p data-es>{about.es.manifesto}</p>
+      <p data-en>{about.en.manifesto}</p>
+    </blockquote>
+
+    <!-- Pillars -->
+    <div class="about-grid">
+      {about.es.pillars.map((pillar, i) => (
+        <div class={`about-card reveal d${i + 1}`}>
+          <div class="about-num">{pillar.num}</div>
+          <h3 class="about-title" data-es>{pillar.title}</h3>
+          <h3 class="about-title" data-en>{about.en.pillars[i].title}</h3>
+          <p class="about-body" data-es>{pillar.body}</p>
+          <p class="about-body" data-en>{about.en.pillars[i].body}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

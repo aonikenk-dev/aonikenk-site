@@ -357,7 +357,7 @@
         "proyecto en",
         "<acc>mente?</acc>"
       ],
-      "body": "Contame qué necesitás. Respondo en menos de 24 horas y sin compromiso. Trabajo con clientes de toda Argentina y Latinoamérica.",
+      "body": "Contanos qué necesitás. Si tenés una idea o proyecto en mente, no dudes en escribirnos. Nos encantaría saber de vos, entender tus necesidades y ver cómo podemos ayudarte a llevar tu proyecto al próximo nivel.",
       "form": {
         "name": "Nombre",
         "name_ph": "Tu nombre",
@@ -365,7 +365,7 @@
         "type": "Tipo de proyecto",
         "type_ph": "Software / Branding / Landing page / Otro",
         "message": "Mensaje",
-        "message_ph": "Contame tu idea o proyecto...",
+        "message_ph": "Contanos tu idea o proyecto...",
         "submit": "Enviar mensaje →"
       }
     },
@@ -375,7 +375,7 @@
         "in",
         "<acc>mind?</acc>"
       ],
-      "body": "Tell me what you need. I respond within 24 hours, no strings attached. I work with clients across Argentina and Latin America.",
+      "body": "Tell us what you need. If you have an idea or project in mind, don't hesitate to reach out. We'd love to hear from you, understand your needs, and see how we can help take your project to the next level.",
       "form": {
         "name": "Name",
         "name_ph": "Your name",
@@ -383,7 +383,7 @@
         "type": "Project type",
         "type_ph": "Software / Branding / Landing page / Other",
         "message": "Message",
-        "message_ph": "Tell me about your idea or project...",
+        "message_ph": "Tell us about your idea or project...",
         "submit": "Send message →"
       }
     }
@@ -393,25 +393,75 @@
       "services": "Servicios",
       "projects": "Proyectos",
       "contact": "Contacto",
-      "cta": "Hablemos"
+      "cta": "Hablemos",
+      "about": "Nosotros"
     },
     "en": {
       "services": "Services",
       "projects": "Projects",
       "contact": "Contact",
-      "cta": "Let's talk"
+      "cta": "Let's talk",
+      "about": "About"
     }
   },
   "footer": {
     "es": {
       "services": "Servicios",
       "projects": "Proyectos",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "about": "Nosotros"
     },
     "en": {
       "services": "Services",
       "projects": "Projects",
-      "contact": "Contact"
+      "contact": "Contact",
+      "about": "About"
+    }
+  },
+  "about": {
+    "es": {
+      "eyebrow": "Nosotros",
+      "title": "Por qué existimos",
+      "manifesto": "Creemos que la tecnología no debería necesitar traducción. Que el mejor software es el que entiende el negocio antes de escribir la primera línea. Que ser del sur no es una limitación — es una ventaja: sabemos lo que cuesta construir algo real en condiciones reales.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Misión",
+          "body": "Resolver la tecnología completa de una empresa — desde el cableado hasta la identidad digital — con un solo interlocutor que entiende el negocio, el contexto y los objetivos."
+        },
+        {
+          "num": "02",
+          "title": "Visión",
+          "body": "Ser la referencia tech para empresas del sector productivo patagónico, construyendo desde el fin del mundo soluciones que compiten globalmente."
+        },
+        {
+          "num": "03",
+          "title": "Valores",
+          "body": "Raíz patagónica · Precisión técnica · Claridad en la comunicación · Compromiso con el resultado · Calma ante la complejidad."
+        }
+      ]
+    },
+    "en": {
+      "eyebrow": "About",
+      "title": "Why we exist",
+      "manifesto": "We believe technology shouldn't need translation. That the best software understands the business before writing the first line. That being from the south is not a limitation — it's an advantage: we know what it takes to build something real under real conditions.",
+      "pillars": [
+        {
+          "num": "01",
+          "title": "Mission",
+          "body": "Solving a company's complete technology stack — from cabling to digital identity — with a single point of contact who understands the business, the context, and the goals."
+        },
+        {
+          "num": "02",
+          "title": "Vision",
+          "body": "To be the tech reference for companies in the Patagonian productive sector, building from the edge of the world solutions that compete globally."
+        },
+        {
+          "num": "03",
+          "title": "Values",
+          "body": "Patagonian roots · Technical precision · Clear communication · Commitment to results · Calm in the face of complexity."
+        }
+      ]
     }
   }
 }
