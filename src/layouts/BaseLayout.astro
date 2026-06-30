@@ -24,6 +24,15 @@ const {
   <meta name="description" content={description} />
   <title>{title}</title>
 
+  <!-- Set theme before paint to avoid flash -->
+  <script is:inline>
+    (function () {
+      var saved = localStorage.getItem('aonikenk-theme');
+      var theme = saved || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Favicon -->
   <link rel="icon"             href="/favicon.ico" sizes="48x48" />
   <link rel="icon"             href="/favicon.svg" type="image/svg+xml" />
@@ -60,11 +69,13 @@ const {
     import { initLang   } from '../scripts/i18n.js';
     import { initSplash } from '../scripts/splash.js';
     import { initReveal } from '../scripts/reveal.js';
+    import { initTheme  } from '../scripts/theme.js';
 
     initCursor();
     initLang();
     initSplash();
     initReveal();
+    initTheme();
   </script>
 
 </body>

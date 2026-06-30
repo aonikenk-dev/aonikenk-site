@@ -1,6 +1,7 @@
 ---
 import Isotipo from './Isotipo.astro';
 import LangSwitch from './LangSwitch.astro';
+import ThemeSwitch from './ThemeSwitch.astro';
 import data from '../data/site.json';
 const { site } = data;
 ---
@@ -9,8 +10,11 @@ const { site } = data;
   <div class="splash-bg"></div>
   <div class="splash-grid"></div>
 
-  <!-- lang switch top-right -->
-  <div class="splash-lang"><LangSwitch /></div>
+  <!-- theme + lang switch top-right -->
+  <div class="splash-controls">
+    <ThemeSwitch />
+    <LangSwitch />
+  </div>
 
   <!-- terrain SVG -->
   <svg class="splash-terrain" viewBox="0 0 1440 200" preserveAspectRatio="none">

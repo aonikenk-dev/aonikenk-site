@@ -264,6 +264,7 @@
 }
 
 // ── Nav (project layout override) ────────────────────────────
+.nav-right { display: flex; align-items: center; gap: 16px; }
 .nav-back {
   display: flex; align-items: center; gap: 8px;
   font-family: $font-mono; font-size: 11px; letter-spacing: .15em;

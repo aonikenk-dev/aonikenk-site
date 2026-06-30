@@ -20,7 +20,7 @@
         "transforman."
       ],
       "sub": "Digital development studio.",
-      "body": "Estudio de desarrollo de software, branding y soluciones de IT especializado en sistemas modernos, interfaces minimalistas y una sólida identidad visual. Creamos con personalidad y diseñamos experiencias digitales que transforman.",
+      "body": "Estudio de desarrollo de software, branding y soluciones de IT especializado en sistemas modernos, interfaces minimalistas, integraciones y automatizaciones con IA, y una sólida identidad visual. Creamos con personalidad y diseñamos experiencias digitales que transforman.",
       "cta_primary": "Ver proyectos",
       "cta_secondary": "Hablemos →"
     },
@@ -31,7 +31,7 @@
         "transform."
       ],
       "sub": "Digital development studio.",
-      "body": "Software development, branding and IT solutions studio focused on modern software systems, minimal interfaces and strong visual identity. We craft with character and design digital experiences that transform.",
+      "body": "Software development, branding and IT solutions studio focused on modern software systems, minimal interfaces, AI automation and integration, and strong visual identity. We craft with character and design digital experiences that transform.",
       "cta_primary": "View projects",
       "cta_secondary": "Let's talk →"
     }
@@ -160,11 +160,11 @@
     {
       "id": "koonek",
       "slug": "koonek",
-      "name": "Koonek",
-      "tagline": "AI-powered Healthcare Management Platform",
+      "name": "Koonek HOP",
+      "tagline": "AI-powered Healthcare Operations Platform",
       "type": "SaaS · HMP · HMS · AI",
       "featured": true,
-      "img": "/img/projects/koonek-dashboard.png",
+      "img": "/img/projects/koonek-2.png",
       "color": "p1",
       "show": true,
       "tags": [
@@ -183,7 +183,7 @@
         "desc": "Koonek is an AI-powered healthcare management platform built on the MERN stack and developed under the aonikenk.dev ecosystem. The platform covers the core workflows of a medical practice: patient registration and management, appointment scheduling, health record tracking, and prescription generation. Beyond traditional HMS functionality, the platform incorporates AI-assisted workflows through components such as Koonek Copilot and Koonek Agent, enabling intelligent clinical writing assistance and automated health record's document ingestion. This allows healthcare professionals to optimize their time, reduce administrative tasks, and enhance patient care quality through smart, automated workflows."
       },
       "url": "/projects/koonek",
-      "github": "https://github.com/avazquezcendron",
+      "live": "https://landing.koonek.aonikenk.dev",
       "details": [
         {
           "eyebrow": {"es": "Flujos principales", "en": "Core workflows"},
@@ -211,6 +211,67 @@
               "title": {"es": "Generación de recetas", "en": "Prescription Generation"},
               "desc": {"es": "Flujos de trabajo optimizados para la creación y gestión de recetas médicas integradas en el proceso clínico.", "en": "Streamlined prescription workflows integrated into the clinical process."},
               "icon": "prescription"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kaiken",
+      "slug": "kaiken",
+      "name": "Kaiken BOP",
+      "tagline": "AI-powered Business Operations Platform",
+      "type": "SaaS · ERP · CMR · AI",
+      "featured": false,
+      "img": "/img/projects/kaiken.png",
+      "color": "p3",
+      "show": true,
+      "tags": [
+        "ERP",
+        "CMR",
+        "SaaS",
+        "Fullstack",
+        "IoT",
+        "AI Assistants",
+        "Automation"
+      ],
+      "es": {
+        "short": "Platamorma ERP cloud, diseñado para el sector minero. Facturación · Finanzas · Administración · Operaciones · Stock · RRHH, todo potenciado con IA y en un solo lugar.",
+        "desc": "Kaiken es una plataforma de operaciones empresariales (BOP) impulsada por IA, desarrollada bajo el ecosistema aonikenk.dev. La plataforma cubre los flujos principales de la gestión empresarial: facturación, finanzas, administración, operaciones, stock y recursos humanos. A diferencia de otras soluciones, Kaiken integra componentes de IA - Kaiken Copilot y Kaiken Agent - para asistir en la redacción de documentos, análisis de datos y automatización de procesos. Esto permite a las empresas optimizar su tiempo, reducir tareas administrativas y mejorar la eficiencia operativa a través de flujos de trabajo inteligentes y automatizados."
+      },
+      "en": {
+        "short": "ERP Cloud platform designed for the mining sector. Billing · Finance · Administration · Operations · Inventory · HR, all powered by AI and in one place.",
+        "desc": "Kaiken is an AI-powered Business Operations Platform developed under the aonikenk.dev ecosystem. The platform covers the main workflows of enterprise management: billing, finance, administration, operations, inventory, and human resources. Unlike other solutions, Kaiken integrates AI components - Kaiken Copilot and Kaiken Agent - to assist in document writing, data analysis, and process automation. This allows companies to optimize their time, reduce administrative tasks, and improve operational efficiency through intelligent and automated workflows."
+      },
+      "url": "/projects/kaiken",
+      "live": "https://landing.kaiken.aonikenk.dev",
+      "details": [
+        {
+          "eyebrow": {"es": "Flujos principales", "en": "Core workflows"},
+          "title": {"es": "Construido alrededor", "en": "Built around"},
+          "dim": {"es": "de los flujos esenciales de la gestión empresarial moderna.", "en": "the essential workflows of modern business management."},
+          "desc": {"es": "Kaiken cubre los flujos principales de la gestión empresarial: facturación, finanzas, administración, operaciones, stock y recursos humanos.", "en": "Kaiken covers the core workflows of business management: billing, finance, administration, operations, inventory and human resources."},
+          "type": "card",
+          "items": [
+            {
+              "title": {"es": "Facturación y Finanzas", "en": "Billing and Finance"},
+              "desc": {"es": "Gestión de facturación, pagos, cobros y finanzas empresariales. Integración con sistemas contables y bancarios.", "en": "Management of billing, payments, collections and business finances. Integration with accounting and banking systems."},
+              "icon": "finance"
+            },
+            {
+              "title": {"es": "Administración y Operaciones", "en": "Administration and Operations"},
+              "desc": {"es": "Flujos de trabajo administrativos y operativos diseñados para empresas del sector minero. Gestión de proyectos, tareas y recursos.", "en": "Administrative and operational workflows designed for companies in the mining sector. Project, task and resource management."},
+              "icon": "operations"
+            },
+            {
+              "title": {"es": "Gestión de Stock e Inventario", "en": "Inventory and Stock Management"},
+              "desc": {"es": "Control de inventario, stock y logística. Seguimiento de productos, materiales y equipos en tiempo real.", "en": "Inventory, stock and logistics control. Real-time tracking of products, materials and equipment."},
+              "icon": "inventory"
+            },
+            {
+              "title": {"es": "Recursos Humanos", "en": "Human Resources"},
+              "desc": {"es": "Gestión de empleados, nóminas, asistencia y desempeño. Flujos de trabajo para contratación y desarrollo del personal.", "en": "Employee management, payroll, attendance and performance. Workflows for hiring and staff development."},
+              "icon": "hr"
             }
           ]
         }
@@ -301,7 +362,7 @@
       "featured": false,
       "img": "/img/projects/pomodorock.png",
       "color": "p3",
-      "show": true,
+      "show": false,
       "tags": [
         "React.js",
         "Redux",

@@ -12,22 +12,6 @@ $ember    : #E07A52;
 $moss     : #3D6B4F;
 $ice      : #7BAFC4;
 
-// ── CSS custom properties (used in JS too) ────────────────────
-:root {
-  --obsidian : #{$obsidian};
-  --carbon   : #{$carbon};
-  --slate    : #{$slate};
-  --border   : #{$border};
-  --muted    : #{$muted};
-  --subtle   : #{$subtle};
-  --body     : #{$body};
-  --white    : #{$white};
-  --sienna   : #{$sienna};
-  --ember    : #{$ember};
-  --moss     : #{$moss};
-  --ice      : #{$ice};
-}
-
 // ── Typography ────────────────────────────────────────────────
 $font-display : 'Syne', sans-serif;
 $font-mono    : 'DM Mono', monospace;

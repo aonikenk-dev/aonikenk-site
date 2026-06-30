@@ -1,0 +1,34 @@
+// CSS custom properties — emitted once globally (see main.scss).
+// Component-scoped styles should `@use 'tokens' as *` for the Sass
+// variables only; they must not import this file, or the :root /
+// [data-theme] rules get duplicated per component and can race in
+// source order against each other.
+@use 'tokens' as *;
+
+:root {
+  --obsidian : #{$obsidian};
+  --carbon   : #{$carbon};
+  --slate    : #{$slate};
+  --border   : #{$border};
+  --muted    : #{$muted};
+  --subtle   : #{$subtle};
+  --body     : #{$body};
+  --white    : #{$white};
+  --sienna   : #{$sienna};
+  --ember    : #{$ember};
+  --moss     : #{$moss};
+  --ice      : #{$ice};
+  --nav-bg   : rgba(13, 15, 18, .92);
+}
+
+[data-theme="light"] {
+  --obsidian : #F4F1EA;
+  --carbon   : #FFFFFF;
+  --slate    : #ECE6D9;
+  --border   : #DAD3C2;
+  --muted    : #97A1AE;
+  --subtle   : #5B6472;
+  --body     : #33363B;
+  --white    : #14171B;
+  --nav-bg   : rgba(244, 241, 234, .92);
+}

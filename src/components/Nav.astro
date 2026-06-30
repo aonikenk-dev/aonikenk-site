@@ -1,6 +1,7 @@
 ---
 import Isotipo from './Isotipo.astro';
 import LangSwitch from './LangSwitch.astro';
+import ThemeSwitch from './ThemeSwitch.astro';
 import data from '../data/site.json';
 const { nav } = data;
 ---
@@ -31,6 +32,7 @@ const { nav } = data;
   </ul>
 
   <div class="nav-right">
+    <ThemeSwitch />
     <LangSwitch />
     <a href="#contact" class="nav-cta" data-es>{nav.es.cta}</a>
     <a href="#contact" class="nav-cta" data-en>{nav.en.cta}</a>
@@ -47,7 +49,7 @@ const { nav } = data;
     transition: background .4s, padding .4s, border-bottom .4s;
     pointer-events: none; opacity: 0;
     &.visible  { pointer-events: all; opacity: 1; transition: background .4s, padding .4s, opacity .4s; }
-    &.scrolled { background: rgba(13,15,18,.92); backdrop-filter: blur(12px); padding: 16px 48px; border-bottom: 1px solid var(--border); }
+    &.scrolled { background: var(--nav-bg); backdrop-filter: blur(12px); padding: 16px 48px; border-bottom: 1px solid var(--border); }
   }
   .nav-left {
     display: flex; align-items: center; gap: 10px; text-decoration: none;
