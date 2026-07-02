@@ -18,12 +18,27 @@ function json(body, status = 200) {
   });
 }
 
-export async function POST({ request }) {
+async function verifyTurnstile(token, secret, remoteIp) {
+  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ secret, response: token, remoteip: remoteIp }),
+  });
+  const result = await res.json();
+  return result.success === true;
+}
+
+export async function POST({ request, clientAddress }) {
   let body;
   try {
     body = await request.json();
   } catch {
     return json({ error: 'invalid_body' }, 400);
+  }
+
+  // Honeypot: real users never fill this hidden field. Pretend success so bots don't learn.
+  if ((body.website || '').trim()) {
+    return json({ ok: true });
   }
 
   const name = (body.name || '').trim();
@@ -36,6 +51,19 @@ export async function POST({ request }) {
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return json({ error: 'invalid_email' }, 400);
+  }
+
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY ?? import.meta.env.TURNSTILE_SECRET_KEY;
+  const turnstileToken = body['cf-turnstile-response'];
+  if (!turnstileSecret) {
+    return json({ error: 'server_misconfigured' }, 500);
+  }
+  if (!turnstileToken) {
+    return json({ error: 'turnstile_missing' }, 400);
+  }
+  const humanVerified = await verifyTurnstile(turnstileToken, turnstileSecret, clientAddress);
+  if (!humanVerified) {
+    return json({ error: 'turnstile_failed' }, 400);
   }
 
   const apiKey = process.env.RESEND_API_KEY ?? import.meta.env.RESEND_API_KEY;

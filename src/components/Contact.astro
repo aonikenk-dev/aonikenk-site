@@ -61,6 +61,11 @@ const { contact, site } = data;
       <!-- Right: form -->
       <div class="reveal d2">
         <form class="cnt-form" id="contact-form">
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
           <div class="f-row">
             <div class="f-group">
               <label class="f-label" data-es>{contact.es.form.name}</label>
@@ -101,6 +106,8 @@ const { contact, site } = data;
             ></textarea>
           </div>
 
+          <div class="cf-turnstile" data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY} data-theme="auto"></div>
+
           <button type="submit" class="btn-submit" id="contact-submit">
             <span data-es>{contact.es.form.submit}</span>
             <span data-en>{contact.en.form.submit}</span>
@@ -126,3 +133,5 @@ const { contact, site } = data;
     </div>
   </div>
 </section>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>

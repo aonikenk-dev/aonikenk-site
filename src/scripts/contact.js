@@ -28,6 +28,8 @@ export function initContact() {
       status.dataset.state = 'error';
     } finally {
       submit.disabled = false;
+      // Turnstile tokens are single-use — get a fresh one for the next attempt
+      window.turnstile?.reset();
     }
   });
 }
