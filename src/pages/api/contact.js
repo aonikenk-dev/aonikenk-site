@@ -38,8 +38,8 @@ export async function POST({ request }) {
     return json({ error: 'invalid_email' }, 400);
   }
 
-  const apiKey = import.meta.env.RESEND_API_KEY;
-  const domain = import.meta.env.RESEND_EMAIL_DOMAIN;
+  const apiKey = process.env.RESEND_API_KEY ?? import.meta.env.RESEND_API_KEY;
+  const domain = process.env.RESEND_EMAIL_DOMAIN ?? import.meta.env.RESEND_EMAIL_DOMAIN;
   if (!apiKey || !domain) {
     return json({ error: 'server_misconfigured' }, 500);
   }
