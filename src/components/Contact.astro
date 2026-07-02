@@ -106,7 +106,7 @@ const { contact, site } = data;
             ></textarea>
           </div>
 
-          <div class="cf-turnstile" data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY} data-theme="auto"></div>
+          <div class="cf-turnstile" data-sitekey={process.env.PUBLIC_TURNSTILE_SITE_KEY ?? import.meta.env.PUBLIC_TURNSTILE_SITE_KEY} data-theme="auto"></div>
 
           <button type="submit" class="btn-submit" id="contact-submit">
             <span data-es>{contact.es.form.submit}</span>
