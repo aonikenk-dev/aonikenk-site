@@ -6,10 +6,13 @@
     "cover_slogan": "Crafted at the edge · 🗻 · ",
     "slogan": "Crafted at the edge",
     "email": "hello@aonikenk.dev",
+    "auxEmail": "agustiki@hotmail.com",
     "location": "Patagonia, Argentina",
     "socials": {
       "linkedin": "https://linkedin.com/in/aonikenk.dev",
-      "github": "https://github.com/aonikenk-dev"
+      "github": "https://github.com/aonikenk-dev",
+      "instagram": "https://instagram.com/aonikenk.dev",
+      "twitter": "https://twitter.com/aonikenk_dev"
     }
   },
   "hero": {
@@ -427,7 +430,10 @@
         "type_ph": "Software / Branding / Landing page / Otro",
         "message": "Mensaje",
         "message_ph": "Contanos tu idea o proyecto...",
-        "submit": "Enviar mensaje →"
+        "submit": "Enviar mensaje →",
+        "sending": "Enviando...",
+        "success": "¡Mensaje enviado! Te responderemos pronto.",
+        "error": "Hubo un error. Intentá de nuevo o escribinos directamente."
       }
     },
     "en": {
@@ -445,7 +451,10 @@
         "type_ph": "Software / Branding / Landing page / Other",
         "message": "Message",
         "message_ph": "Tell us about your idea or project...",
-        "submit": "Send message →"
+        "submit": "Send message →",
+        "sending": "Sending...",
+        "success": "Message sent! We'll get back to you soon.",
+        "error": "Something went wrong. Please try again or email us directly."
       }
     }
   },

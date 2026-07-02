@@ -24,7 +24,7 @@ const { contact, site } = data;
         <p class="cnt-text" data-en>{contact.en.body}</p>
 
         <div class="cnt-links">
-          <a href={`mailto:${site.email}`} class="cnt-link">
+          <a href={`mailto:${site.auxEmail}`} class="cnt-link">
             <div class="clink-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8896A8" stroke-width="1.5" stroke-linecap="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2,4 L12,13 L22,4"/>
@@ -45,13 +45,14 @@ const { contact, site } = data;
             <span class="clink-arr">↗</span>
           </a>
 
-          <a href={site.socials.github} target="_blank" rel="noopener" class="cnt-link">
+          <a href={site.socials.instagram} target="_blank" rel="noopener" class="cnt-link">
             <div class="clink-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8896A8" stroke-width="1.5" stroke-linecap="round">
-                <path d="M9,19c-5,1.5-5-2.5-7-3m14,6v-3.87a3.37,3.37,0,0,0-.94-2.61c3.14-.35,6.44-1.54,6.44-7A5.44,5.44,0,0,0,20,4.77,5.07,5.07,0,0,0,19.91,1S18.73.65,16,2.48a13.38,13.38,0,0,0-7,0C6.27.65,5.09,1,5.09,1A5.07,5.07,0,0,0,5,4.77a5.44,5.44,0,0,0-1.5,3.78c0,5.42,3.3,6.61,6.44,7A3.37,3.37,0,0,0,9,18.13V22"/>
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <path d="M16,11.37 A4,4 0 1,1 12.63,8 A4,4 0 0,1 16,11.37 M17.5,6.5 L17.51,6.5"/>
               </svg>
             </div>
-            {site.socials.github.replace('https://', '')}
+            Instagram
             <span class="clink-arr">↗</span>
           </a>
         </div>
@@ -100,10 +101,25 @@ const { contact, site } = data;
             ></textarea>
           </div>
 
-          <button type="submit" class="btn-submit">
+          <button type="submit" class="btn-submit" id="contact-submit">
             <span data-es>{contact.es.form.submit}</span>
             <span data-en>{contact.en.form.submit}</span>
           </button>
+
+          <div class="f-status" id="contact-status" aria-live="polite">
+            <p class="f-status-msg" data-state="sending">
+              <span data-es>{contact.es.form.sending}</span>
+              <span data-en>{contact.en.form.sending}</span>
+            </p>
+            <p class="f-status-msg" data-state="success">
+              <span data-es>{contact.es.form.success}</span>
+              <span data-en>{contact.en.form.success}</span>
+            </p>
+            <p class="f-status-msg" data-state="error">
+              <span data-es>{contact.es.form.error}</span>
+              <span data-en>{contact.en.form.error}</span>
+            </p>
+          </div>
         </form>
       </div>
 

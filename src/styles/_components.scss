@@ -194,7 +194,7 @@
   &:focus { border-color:var(--sienna); }
   &::placeholder { color:var(--muted); }
 }
-.f-area    { min-height:120px; }
+.f-area    { min-height:252px; }
 .f-row     { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .btn-submit {
   font-family:$font-mono; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
@@ -202,6 +202,14 @@
   cursor:none; transition:background .2s, transform .15s;
   align-self:flex-start; margin-top:8px;
   &:hover { background:var(--ember); transform:translateY(-1px); }
+  &:disabled { opacity:.6; transform:none; }
+}
+
+.f-status {
+  .f-status-msg { display:none; font-size:11px; letter-spacing:.05em; margin:0; }
+  &[data-state="sending"] .f-status-msg[data-state="sending"] { display:block; color:var(--muted); }
+  &[data-state="success"] .f-status-msg[data-state="success"] { display:block; color:var(--moss); }
+  &[data-state="error"]   .f-status-msg[data-state="error"]   { display:block; color:var(--sienna); }
 }
 
 // ── About / Values ────────────────────────────────────────────
